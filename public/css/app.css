@@ -63,6 +63,13 @@ header.scrolled {
     background-size: cover;
     opacity: 0.9;
 }
+.animate-list span {
+    transition: transform 0.4s ease, color 0.4s ease;
+    transform-origin: center left;
+}
+.animate-list span.active {
+    transform: scale(1.3);
+}
 #mobile-menu{
     height: calc(100vh - 5rem);
 }
