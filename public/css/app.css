@@ -1,0 +1,126 @@
+@import "tailwindcss";
+.border-violet-500{
+    border-color: rgb(96, 27, 126) !important;
+}
+.text-violet-500{
+    color: rgb(149, 43, 194) !important;
+}
+.bg-violet-500{
+    background-color: rgb(48, 16, 61) !important;
+}
+.bg-violet-600{
+    background-color: rgb(38, 8, 51) !important;
+}
+.hover\:bg-violet-600 {
+    &:hover {
+        @media (hover: hover) {
+            background-color: rgb(70, 14, 94) !important;
+        }
+    }
+}
+.gradient{
+    background-image: radial-gradient(circle at 70% 40%, rgba(142,68,173,1) 0%, rgba(142,68,173,0.75) 18%, rgba(142,68,173,0.35) 35%, rgba(0,0,0,0) 60%);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.letter{
+    padding:0.12em 0.18em;
+    transition:transform 180ms ease; /* small pop when active */
+}
+.logo{
+    width: 60px;
+    height: 60px;
+}
+.chip{
+    transform: scale3d(0.3, 0.3, 0.3) rotateZ(360deg);
+    transition: all 1s ease;
+    z-index: 5;
+}
+.letter.pop{
+    transform: translateY(-10%);
+}
+.horizontal-slider > .slide {
+    min-width: 25%;
+}
+.arrowDown {
+    animation: bounce 1.5s infinite;
+}
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(10px);
+    }
+    60% {
+        transform: translateY(5px);
+    }
+}
+header.scrolled {
+    background: black;
+    background-image: radial-gradient(circle at 70% 40%, rgba(142,68,173,1) 0%, rgba(142,68,173,0.75) 18%, rgba(142,68,173,0.35) 35%, rgba(0,0,0,0) 60%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.9;
+}
+#mobile-menu{
+    height: calc(100vh - 5rem);
+}
+.rate input{
+    appearance: none;
+    width: 1.05rem;
+    height: 1.05rem;
+    outline: none;
+    position: relative;
+    cursor: pointer;
+    background-image: url("../img/index/star.png?v=1");
+    background-size: 1.05rem;
+}
+.rate input[disabled = "disabled"]{
+    background-image: url("../img/index/star.png?v=1") !important;
+    cursor: default;
+}
+.rate input:checked, .rate-checked{
+    background-image: url("../img/index/starActive.png") !important;
+    cursor: default;
+}
+.cope-promo-code{
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    border: 2px solid white;
+    align-self: center;
+}
+.cope-promo-code:after{
+    content: "";
+    display: block;
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+    width: inherit;
+    height: inherit;
+    position: relative;
+    top: -0.25rem;
+    right: -0.1rem;
+}
+/**Login page**/
+.form-group input::placeholder{
+    opacity: 0;
+}
+.form-group input:focus + label {
+    top: -1.5rem;
+}
+.form-group input:not(:placeholder-shown) + label {
+    top: -1.5rem;
+}
+.form-group input:not(:placeholder-shown):not(:focus) + label {
+    top: -1.5rem;
+}
+/**Admin panel**/
+input[name="payments[]"]:checked + label,  input[name="currencies[]"]:checked + label, input[name="sports[]"]:checked + label, input[name="supports[]"]:checked + label{
+    background-color: rgb(96, 27, 126) !important;
+    color: black;
+}
+.payment-label:hover, .currency-label:hover, .sport-label:hover, .support-label:hover{
+    background-color: rgba(128, 128, 128, 0.67);
+    color: #ffffff;
+}
