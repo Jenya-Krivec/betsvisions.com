@@ -130,5 +130,4 @@
     </main>
     <script defer type="text/javascript" src="{{ asset('js/index/rate.js').'?v='.filemtime('js/index/rate.js') }}"></script>
     <script defer type="text/javascript" src="{{ asset('js/index/slider.js').'?v='.filemtime('js/index/slider.js') }}"></script>
-    <script defer type="text/javascript" src="{{ asset('js/index/header.js').'?v='.filemtime('js/index/header.js') }}"></script>
 @endsection

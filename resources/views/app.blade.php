@@ -109,5 +109,6 @@
 <script defer type="text/javascript" src="{{asset('js/cookie.js').'?v='.filemtime('js/cookie.js')}}"></script>
 <script defer type="text/javascript" src="{{asset('js/link.js').'?v='.filemtime('js/link.js')}}"></script>
 <script defer type="text/javascript" src="{{asset('js/chip.js').'?v='.filemtime('js/chip.js')}}"></script>
+<script defer type="text/javascript" src="{{ asset('js/index/header.js').'?v='.filemtime('js/index/header.js') }}"></script>
 </html>
 
