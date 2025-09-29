@@ -83,7 +83,7 @@
     </nav>
 </header>
 @yield('content')
-<button class="fixed bottom-20 right-4 bg-white rounded-full p-2 hidden border-2 border-violet-500 z-20" id="go-up">
+<button class="fixed bottom-20 right-4 bg-white rounded-full p-2 hidden border-2 border-violet-500 z-20 cursor-pointer" id="go-up">
     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="rgb(149, 43, 194)">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
     </svg>

@@ -18,6 +18,13 @@
         }
     }
 }
+.hover\:bg-white {
+    &:hover {
+        @media (hover: hover) {
+            background-color: white !important;
+        }
+    }
+}
 .gradient{
     background-image: radial-gradient(circle at 70% 40%, rgba(142,68,173,1) 0%, rgba(142,68,173,0.75) 18%, rgba(142,68,173,0.35) 35%, rgba(0,0,0,0) 60%);
     background-repeat: no-repeat;

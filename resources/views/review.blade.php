@@ -69,16 +69,16 @@
             </div>
         </div>
         <!--Review-->
-        <div class="w-full bg-gray-100 px-0 my-4 lg:px-28">
+        <div class="w-full bg-gray-100 px-0 lg:px-28">
             <div class="px-2 sm:px-10 py-4 bg-white mx-auto" style="max-width: 1200px">
                 @foreach($review as $component)
                     @include('inc/component_'.$component['component'], ['key' => $component['key'], 'values' => json_decode($component['value_'.app()->getLocale()], true)])
                 @endforeach
             </div>
         </div>
-        <div class="w-full bg-gray-100 px-0 mt-4 lg:px-28">
+        <div class="w-full bg-gray-100 px-0 lg:px-28">
             <div class="px-2 sm:px-10 py-4 bg-white mx-auto" style="max-width: 1200px">
-                <span data-url="{{$bookmaker['url']}}" class="bg-green-600 text-xs sm:text-lg border-2 border-green-600 text-white rounded-md hover:bg-white hover:text-black flex justify-center items-center cursor-pointer transition-all w-44 duration-500 my-2 mx-auto px-16 py-2">@lang('review.Claim')</span>
+                <span data-url="{{$bookmaker['url']}}" class="bg-violet-500 text-xs sm:text-lg border-2 border-violet-500 text-white rounded-md hover:bg-white hover:text-black flex justify-center items-center cursor-pointer transition-all w-44 duration-500 my-2 mx-auto px-16 py-2">@lang('review.Claim')</span>
             </div>
         </div>
     </main>
