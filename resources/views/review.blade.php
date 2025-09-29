@@ -63,8 +63,8 @@
                     <div class="text-xs sm:text-lg border-2 border-white rounded-md bg-white text-black flex justify-center items-center transition-all duration-500 sm:mx-2 m-1 p-2 sm:px-4">
                         <p>{{trans('review.Review', ['bookmaker' => ''])}}</p>
                     </div>
-                    <a href="" class="text-xs sm:text-lg border-2 border-white text-white rounded-md hover:bg-white hover:text-black flex justify-center items-center transition-all duration-500 sm:mx-2 m-1 p-2 sm:px-4">{{trans('review.Promotions and Bonuses', ['bookmaker' => ''])}}</a>
-                    <a href="" class="text-xs sm:text-lg border-2 border-white text-white rounded-md hover:bg-white hover:text-black flex justify-center items-center transition-all duration-500 sm:mx-2 m-1 p-2 sm:px-4">@lang('review.Mobile App')</a>
+                    <a href="{{route('promocode', $bookmaker['key'])}}" class="text-xs sm:text-lg border-2 border-white text-white rounded-md hover:bg-white hover:text-black flex justify-center items-center transition-all duration-500 sm:mx-2 m-1 p-2 sm:px-4">{{trans('review.Promotions and Bonuses', ['bookmaker' => ''])}}</a>
+                    <a href="{{route('mobileapp', $bookmaker['key'])}}" class="text-xs sm:text-lg border-2 border-white text-white rounded-md hover:bg-white hover:text-black flex justify-center items-center transition-all duration-500 sm:mx-2 m-1 p-2 sm:px-4">@lang('review.Mobile App')</a>
                 </div>
             </div>
         </div>

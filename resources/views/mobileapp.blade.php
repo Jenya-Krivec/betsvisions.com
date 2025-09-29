@@ -1,10 +1,10 @@
 @extends('app')
 
-@section('title', trans('promocode.title', ['bookmaker' => $bookmaker['name']]))
+@section('title', trans('mobileapp.title', ['bookmaker' => $bookmaker['name']]))
 
-@section('description',  trans('promocode.description', ['bookmaker' => $bookmaker['name']]))
+@section('description',  trans('mobileapp.description', ['bookmaker' => $bookmaker['name']]))
 
-@section('keywords', trans('promocode.keywords', ['bookmaker' => $bookmaker['name']]))
+@section('keywords', trans('mobileapp.keywords', ['bookmaker' => $bookmaker['name']]))
 
 @section('content')
     <main>
@@ -37,20 +37,26 @@
                     </div>
                     <div class="flex justify-between flex-col sm:rounded-md lg:pl-10 lg:pr-2">
                         <div class="text-white mx-4">
-                            <h1 class="text-lg sm:text-2xl pl-1 font-bold border-l-8 border-white text-white">{{trans('promocode.Promotions and Bonuses', ['bookmaker' => $bookmaker['name']])}}</h1>
+                            <h1 class="text-lg sm:text-2xl pl-1 font-bold border-l-8 border-white text-white">@lang('mobileapp.Mobile App')</h1>
                         </div>
                         <div class="flex flex-col text-white justify-around self-stretch rounded-md my-4 mx-4 font-sans">
-                            <div class="text-sm lg:text-base mb-2">{{$bookmaker['bonus_label_1_'.app()->getLocale()]}}</div>
-                            <div class="text-sm lg:text-base">{{$bookmaker['bonus_label_2_'.app()->getLocale()]}}</div>
+                            <p class="text-sm lg:text-base">{{$bookmaker['warning_'.app()->getLocale()]}}</p>
                         </div>
                         <div class="flex flex-col justify-around flex-shrink-0 self-stretch rounded-md p-2 mx-1 md:mx-auto">
-                            <div class="flex justify-center items-center">
-                                <span data-url="{{$bookmaker['url']}}" class="h-10 w-36 text-sm text-white rounded-md border-2 border-white hover:bg-white hover:text-black flex justify-center items-center cursor-pointer transition-all duration-500 shadow-gray-400">@lang('promocode.Registration')</span>
+                            <div class="flex flex-row sm:flex-col lg:flex-row justify-center items-center">
+                                <span data-url="{{$bookmaker['url']}}" class="h-10 w-36 m-2 text-sm text-white rounded-md border-2 border-white hover:bg-white hover:text-black flex justify-center items-center cursor-pointer transition-all duration-500 shadow-gray-400">
+                                    <span data-url="{{$bookmaker['url']}}">@lang('mobileapp.Download')</span>
+                                    <img data-url="{{$bookmaker['url']}}" src="{{asset('img/mobileapp/android.png'.'?v='.filemtime('img/mobileapp/android.png'))}}" alt="android" width="32" height="32" class="w-4 ml-1">
+                                </span>
+                                <span data-url="{{$bookmaker['url']}}" class="h-10 w-36 m-2 text-sm text-white rounded-md border-2 border-white hover:bg-white hover:text-black flex justify-center items-center cursor-pointer transition-all duration-500 shadow-gray-400">
+                                    <span data-url="{{$bookmaker['url']}}">@lang('mobileapp.Download')</span>
+                                    <img data-url="{{$bookmaker['url']}}" src="{{asset('img/mobileapp/ios.png'.'?v='.filemtime('img/mobileapp/ios.png'))}}" alt="android" width="32" height="32" class="w-4 ml-1">
+                                </span>
                             </div>
                         </div>
                     </div>
                     <div class="flex flex-col justify-around flex-shrink-0 self-stretch rounded-md p-2 animate-list" id="animList">
-                        <p class="text-center text-white">@lang('promocode.Contents')</p>
+                        <p class="text-center text-white">@lang('mobileapp.Contents')</p>
                         <?php $index = 1; ?>
                         @foreach($page as $component)
                             @if($component['component'] === 'h2')
@@ -61,11 +67,11 @@
                 </div>
                 <!--Navigation -->
                 <div class="w-full flex justify-center items-center text-blue-700 py-4 text-sm sm:text-base text-center">
-                    <a href="{{route('review', $bookmaker['key'])}}" class="text-xs sm:text-lg border-2 border-white text-white rounded-md hover:bg-white hover:text-black flex justify-center items-center transition-all duration-500 sm:mx-2 m-1 p-2 sm:px-4">{{trans('promocode.Review', ['bookmaker' => ''])}}</a>
+                    <a href="{{route('review', $bookmaker['key'])}}" class="text-xs sm:text-lg border-2 border-white text-white rounded-md hover:bg-white hover:text-black flex justify-center items-center transition-all duration-500 sm:mx-2 m-1 p-2 sm:px-4">{{trans('mobileapp.Review', ['bookmaker' => ''])}}</a>
+                    <a href="{{route('promocode', $bookmaker['key'])}}" class="text-xs sm:text-lg border-2 border-white text-white rounded-md hover:bg-white hover:text-black flex justify-center items-center transition-all duration-500 sm:mx-2 m-1 p-2 sm:px-4">{{trans('mobileapp.Promotions and Bonuses', ['bookmaker' => ''])}}</a>
                     <div class="text-xs sm:text-lg border-2 border-white rounded-md bg-white text-black flex justify-center items-center transition-all duration-500 sm:mx-2 m-1 p-2 sm:px-4">
-                        <p>{{trans('promocode.Promotions and Bonuses', ['bookmaker' => ''])}}</p>
+                        <p>{{trans('mobileapp.Mobile App', ['bookmaker' => ''])}}</p>
                     </div>
-                    <a href="{{route('mobileapp', $bookmaker['key'])}}" class="text-xs sm:text-lg border-2 border-white text-white rounded-md hover:bg-white hover:text-black flex justify-center items-center transition-all duration-500 sm:mx-2 m-1 p-2 sm:px-4">@lang('promocode.Mobile App')</a>
                 </div>
             </div>
         </div>
@@ -78,13 +84,20 @@
             </div>
         </div>
         <div class="w-full bg-gray-100 px-0 lg:px-28">
-            <div class="px-2 sm:px-10 py-4 bg-white mx-auto" style="max-width: 1200px">
-                <span data-url="{{$bookmaker['url']}}" class="bg-violet-500 text-xs sm:text-lg border-2 border-violet-500 text-white rounded-md hover:bg-white hover:text-black flex justify-center items-center cursor-pointer transition-all w-44 duration-500 my-2 mx-auto px-16 py-2">@lang('promocode.Registration')</span>
+            <div class="px-2 sm:px-10 py-4 bg-white flex justify-center mx-auto" style="max-width: 1200px">
+                <span data-url="{{$bookmaker['url']}}" class="bg-violet-500 text-xs sm:text-lg border-2 border-violet-500 text-white rounded-md hover:bg-white hover:text-black flex justify-center items-center cursor-pointer transition-all w-44 duration-500 my-2 mx-auto px-16 py-2">
+                    <span data-url="{{$bookmaker['url']}}">@lang('mobileapp.Download')</span>
+                    <img data-url="{{$bookmaker['url']}}" src="{{asset('img/mobileapp/android.png'.'?v='.filemtime('img/mobileapp/android.png'))}}" alt="android" width="32" height="32" class="w-4 ml-1">
+                </span>
+                <span data-url="{{$bookmaker['url']}}" class="bg-violet-500 text-xs sm:text-lg border-2 border-violet-500 text-white rounded-md hover:bg-white hover:text-black flex justify-center items-center cursor-pointer transition-all w-44 duration-500 my-2 mx-auto px-16 py-2">
+                    <span data-url="{{$bookmaker['url']}}">@lang('mobileapp.Download')</span>
+                    <img data-url="{{$bookmaker['url']}}" src="{{asset('img/mobileapp/ios.png'.'?v='.filemtime('img/mobileapp/ios.png'))}}" alt="android" width="32" height="32" class="w-4 ml-1">
+                </span>
             </div>
         </div>
     </main>
-    <script defer type="text/javascript" src="{{ asset('js/promo/rate.js').'?v='.filemtime('js/promo/rate.js') }}"></script>
-    <script defer type="text/javascript" src="{{ asset('js/promo/anchor.js').'?v='.filemtime('js/promo/anchor.js') }}"></script>
-    <script defer type="text/javascript" src="{{ asset('js/promo/gradient.js').'?v='.filemtime('js/promo/gradient.js') }}"></script>
-    <script defer type="text/javascript" src="{{ asset('js/promo/contents.js').'?v='.filemtime('js/promo/contents.js') }}"></script>
+    <script defer type="text/javascript" src="{{ asset('js/mobileapp/rate.js').'?v='.filemtime('js/mobileapp/rate.js') }}"></script>
+    <script defer type="text/javascript" src="{{ asset('js/mobileapp/anchor.js').'?v='.filemtime('js/mobileapp/anchor.js') }}"></script>
+    <script defer type="text/javascript" src="{{ asset('js/mobileapp/gradient.js').'?v='.filemtime('js/mobileapp/gradient.js') }}"></script>
+    <script defer type="text/javascript" src="{{ asset('js/mobileapp/contents.js').'?v='.filemtime('js/mobileapp/contents.js') }}"></script>
 @endsection
