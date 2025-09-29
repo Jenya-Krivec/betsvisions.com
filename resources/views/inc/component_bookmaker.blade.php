@@ -46,7 +46,7 @@
         </div>
         <div class="flex flex-col justify-between">
             <a href="{{route('review', $bookmaker['key'])}}" class="flex text-white h-10 px-4 mt-4 text-xs md:text-sm text-center rounded-md justify-center items-center cursor-pointer shadow-gray-400 border-2 hover:border-white hover:bg-white hover:text-black transition-all duration-500">@lang('index.Read Review')</a>
-            <a href="" class="flex text-white h-10 px-4 mt-2 text-xs md:text-sm text-center rounded-md justify-center items-center cursor-pointer shadow-gray-400 border-2 hover:border-white hover:bg-white hover:text-black transition-all duration-500">@lang('index.Read Promo Code Review')</a>
+            <a href="{{route('promocode', $bookmaker['key'])}}" class="flex text-white h-10 px-4 mt-2 text-xs md:text-sm text-center rounded-md justify-center items-center cursor-pointer shadow-gray-400 border-2 hover:border-white hover:bg-white hover:text-black transition-all duration-500">@lang('index.Read Promo Code Review')</a>
             <a href="" class="flex text-white h-10 px-4 mt-2 text-xs md:text-sm text-center rounded-md justify-center items-center cursor-pointer shadow-gray-400 border-2 hover:border-white hover:bg-white hover:text-black transition-all duration-500">@lang('index.Read Mobile App Review')</a>
         </div>
     </div>
