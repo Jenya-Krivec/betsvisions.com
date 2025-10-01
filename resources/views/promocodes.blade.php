@@ -54,7 +54,7 @@
                         <?php $index = 1; ?>
                         @foreach($page as $component)
                             @if($component['component'] === 'h2')
-                                <span data-href="{{json_decode($component['value_'.app()->getLocale()], true)[0]}}" class="text-white cursor-pointer anchor text-base sm:text-xs lg:text-base">{{$index++.'. '.json_decode($component['value_'.app()->getLocale()], true)[0]}}</span>
+                                <span data-href="{{json_decode($component['value_'.app()->getLocale()], true)[0]}}" class="text-white cursor-pointer anchor text-base sm:text-xs lg:text-base">{{$index++.'. '.str_replace(':promocode', $bookmaker['promo_code'], json_decode($component['value_'.app()->getLocale()], true)[0])}}</span>
                             @endif
                         @endforeach
                     </div>
