@@ -136,7 +136,7 @@ class BookmakerSeeder extends Seeder
         Bookmaker::query()->updateOrCreate(
             ['key' => 'mostbet'],
             ['key' => 'mostbet',
-                'name' => 'MOSTBET',
+                'name' => 'Mostbet',
                 'url' => 'https://1wfzws.life/?p=ayxs',
                 'logo' => 'mostbet.svg',
                 'logo_color' => '#003b77',
