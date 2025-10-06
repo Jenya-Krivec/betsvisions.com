@@ -44,11 +44,11 @@
                         </div>
                         <div class="flex flex-col justify-around flex-shrink-0 self-stretch rounded-md p-2 mx-1 md:mx-auto">
                             <div class="flex flex-row sm:flex-col lg:flex-row justify-center items-center">
-                                <span data-url="{{$bookmaker['url']}}" class="h-10 w-36 m-2 text-sm text-white rounded-md border-2 border-white hover:bg-white hover:text-black flex justify-center items-center cursor-pointer transition-all duration-500 shadow-gray-400">
+                                <span data-url="{{$bookmaker['url']}}" class="h-10 w-36 m-2 text-sm text-white rounded-md border-2 border-white hover:bg-white hover:text-black flex justify-center items-center cursor-pointer transition-all duration-500 shadow-gray-400 download-btn">
                                     <span data-url="{{$bookmaker['url']}}">@lang('mobileapp.Download')</span>
                                     <img data-url="{{$bookmaker['url']}}" src="{{asset('img/mobileapp/android.png'.'?v='.filemtime('img/mobileapp/android.png'))}}" alt="android" width="32" height="32" class="w-4 ml-1">
                                 </span>
-                                <span data-url="{{$bookmaker['url']}}" class="h-10 w-36 m-2 text-sm text-white rounded-md border-2 border-white hover:bg-white hover:text-black flex justify-center items-center cursor-pointer transition-all duration-500 shadow-gray-400">
+                                <span data-url="{{$bookmaker['url']}}" class="h-10 w-36 m-2 text-sm text-white rounded-md border-2 border-white hover:bg-white hover:text-black flex justify-center items-center cursor-pointer transition-all duration-500 shadow-gray-400 download-btn">
                                     <span data-url="{{$bookmaker['url']}}">@lang('mobileapp.Download')</span>
                                     <img data-url="{{$bookmaker['url']}}" src="{{asset('img/mobileapp/ios.png'.'?v='.filemtime('img/mobileapp/ios.png'))}}" alt="android" width="32" height="32" class="w-4 ml-1">
                                 </span>
@@ -85,11 +85,11 @@
         </div>
         <div class="w-full bg-gray-100 px-0 lg:px-28">
             <div class="px-2 sm:px-10 py-4 bg-white flex justify-center mx-auto" style="max-width: 1200px">
-                <span data-url="{{$bookmaker['url']}}" class="bg-violet-500 text-xs sm:text-lg border-2 border-violet-500 text-white rounded-md hover:bg-white hover:text-black flex justify-center items-center cursor-pointer transition-all w-44 duration-500 my-2 mx-auto px-16 py-2">
+                <span data-url="{{$bookmaker['url']}}" class="bg-violet-500 text-xs sm:text-lg border-2 border-violet-500 text-white rounded-md hover:bg-white hover:text-black flex justify-center items-center cursor-pointer transition-all w-44 duration-500 my-2 mx-auto px-16 py-2 download-btn">
                     <span data-url="{{$bookmaker['url']}}">@lang('mobileapp.Download')</span>
                     <img data-url="{{$bookmaker['url']}}" src="{{asset('img/mobileapp/android.png'.'?v='.filemtime('img/mobileapp/android.png'))}}" alt="android" width="32" height="32" class="w-4 ml-1">
                 </span>
-                <span data-url="{{$bookmaker['url']}}" class="bg-violet-500 text-xs sm:text-lg border-2 border-violet-500 text-white rounded-md hover:bg-white hover:text-black flex justify-center items-center cursor-pointer transition-all w-44 duration-500 my-2 mx-auto px-16 py-2">
+                <span data-url="{{$bookmaker['url']}}" class="bg-violet-500 text-xs sm:text-lg border-2 border-violet-500 text-white rounded-md hover:bg-white hover:text-black flex justify-center items-center cursor-pointer transition-all w-44 duration-500 my-2 mx-auto px-16 py-2 download-btn">
                     <span data-url="{{$bookmaker['url']}}">@lang('mobileapp.Download')</span>
                     <img data-url="{{$bookmaker['url']}}" src="{{asset('img/mobileapp/ios.png'.'?v='.filemtime('img/mobileapp/ios.png'))}}" alt="android" width="32" height="32" class="w-4 ml-1">
                 </span>
