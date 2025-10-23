@@ -2,6 +2,9 @@
 .border-violet-500{
     border-color: rgb(96, 27, 126) !important;
 }
+.border-l-violet-500{
+    border-left-color: rgb(96, 27, 126) !important;
+}
 .text-violet-500{
     color: rgb(149, 43, 194) !important;
 }

@@ -1,6 +1,6 @@
 <div class="flex flex-row justify-between w-full sm:w-1/2 lg:w-1/3 border-2 border-white relative p-4 @if($authorized && !$bookmaker['active']) border-2 border-red-500 @else border-white @endif" style="background-color: {{$bookmaker['logo_color']}}">
     @if($authorized)
-    <a href="{{route('admin.editBookmaker', $bookmaker['key'])}}" title="edit" class="absolute z-20 bottom-0 right-0 text-xs bg-gray-300 rounded-br-md rounded-tl-md w-5 h-5 flex justify-center items-center">&#x270F;</a>
+    <a href="{{route('admin.editBookmaker', $bookmaker['key'])}}" title="edit" class="absolute z-20 bottom-0 right-0 text-xs bg-gray-300 w-5 h-5 flex justify-center items-center">&#x270F;</a>
     @endif
     <div class="flex flex-col justify-around self-center w-full">
         <div class="flex justify-between items-center">
